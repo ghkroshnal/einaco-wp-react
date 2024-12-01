@@ -2,7 +2,7 @@
 $purple: #392359;
 $cerulean: #04b2d9;
 $green: #94f197;
-$dark-green:#037B3A
+$dark-green: #037b3a;
 $footer: #151414;
 
 // #######################################
@@ -25,9 +25,7 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 //   OPTION 1:
 // - IMPORT BOOTSTRAP ( The entire bootstrap with everything)
 // ##########################################
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-
-// ##########################################
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; // ##########################################
 //   OPTION 2:
 // - IMPORT IMPORT ONLY THE PART OF BOOTSTRAP YOU WANT TO USE
 // ##########################################

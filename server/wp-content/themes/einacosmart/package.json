@@ -1,0 +1,18 @@
+{
+  "name": "einacosmart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass --no-source-map scss/style.scss:style.css",
+    "watch-css": "sass --watch scss/style.scss:style.css"
+  },
+  "keywords": [],
+  "author": "Ghulam Hassan Khan",
+  "license": "ISC",
+  "description": "react with headless wordpress",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.81.0"
+  }
+}
