@@ -15,7 +15,7 @@
             if (has_custom_logo()) : 
                 the_custom_logo(); 
             else : 
-                echo '<img src="' . get_template_directory_uri() . '/assets/images/logos/logo.png" alt="smart logo">';
+                echo '<img src="' . get_template_directory_uri() . '/assets/images/logos/logo.svg" alt="smart logo">';
             endif; 
             ?>
         </a>

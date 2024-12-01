@@ -13,8 +13,13 @@ add_action('after_setup_theme', 'einaco_smart_theme_setup');
 
 // Enqueue styles and scripts
 function einaco_smart_theme_enqueue_scripts() {
+    
+    wp_enqueue_style('einaco-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.css');
+    wp_enqueue_style('einaco-glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', array(), null);
+    wp_enqueue_style('einaco-google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap', array(), null);
     wp_enqueue_style('einaco-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '5.3', 'all');
     wp_enqueue_style('einaco-main-style', get_template_directory_uri() . '/style.css', array(), null, 'all');
+    wp_enqueue_script('einaco-glightbox', 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js', array(), null, true);
     wp_enqueue_script('einaco-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.js', array('jquery'), '5.3', true);
 
     if (!wp_script_is('jquery', 'enqueued')) {
