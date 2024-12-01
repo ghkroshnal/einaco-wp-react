@@ -1,0 +1,8 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.contact-section {
+  @include gradient;
+  width: 100%;
+  height: 100%;
+}
