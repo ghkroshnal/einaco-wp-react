@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hide Title\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-02 08:53+0000\n"
+"PO-Revision-Date: 2024-11-02 08:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: hide-site-title.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: hide-site-title.php:49
+msgid "Hide the Title?"
+msgstr "Ocultar o título?"
+
+#: hide-site-title.php:82
+msgid "Hide the title for this element"
+msgstr "Ocultar o título deste elemento"
+
+#: hide-site-title.php:203
+msgid "Database updated."
+msgstr ""
+
+#: hide-site-title.php:285
+msgid "Dashboard"
+msgstr "Painel"
+
+#: hide-site-title.php:288
+msgid ""
+"The title will not be hidden from administrators. Please log out and visit "
+"the site to see how it appears with the title hidden."
+msgstr ""
+"O título não será escondido dos administradores. Por favor, faça logout e "
+"visite o site para ver como ele aparece com o título oculto."
+
+#: hide-site-title.php:289
+msgid ""
+"Comprehensive Title Removal Strategy: Leveraging 3 Approaches for Success!"
+msgstr ""
+"Estratégia abrangente de remoção de título: aproveitando 3 abordagens para o "
+"sucesso!"
+
+#: hide-site-title.php:290
+msgid ""
+"This plugin will attempt 3 approaches to ensure success in removing the "
+"title. 1) It will try to do so using WordPress get_post_meta. 2) It will "
+"attempt to hide it with CSS by changing the properties of the entry-title "
+"element. If these two approaches do not work, it will proceed to step 3 and "
+"allow you to locate the ID or class of the title element and inform the "
+"plugin. That's all we can do to ensure that the goal is achieved."
+msgstr ""
+"Este plugin tentará 3 abordagens para garantir o sucesso na remoção do "
+"título. 1) Ele tentará fazer isso usando o WordPress get_post_meta. 2) Ele "
+"tentará ocultá-lo com CSS alterando as propriedades do elemento entry-title. "
+"Se essas duas abordagens não funcionarem, ele prosseguirá para a etapa 3 e "
+"permitirá que você localize o ID ou a classe do elemento title e informe o "
+"plugin. Isso é tudo o que podemos fazer para garantir que o objetivo seja "
+"alcançado."
+
+#: hide-site-title.php:291
+msgid ""
+"This plugin will attempt to automatically hide the title of your pages and "
+"posts as selected in the Settings Tab."
+msgstr ""
+"Este plugin tentará ocultar automaticamente o título de suas páginas e "
+"postagens, conforme selecionado na guia Configurações."
+
+#: hide-site-title.php:292
+msgid ""
+"However, if your theme does not adhere to WordPress standards and the title "
+"continues to appear, you will need to identify the class or ID of your "
+"element (title) and add the details in the Settings Tab. There, in the "
+"Settings Tab, you will receive more information on how to do it."
+msgstr ""
+"No entanto, se o seu tema não aderir aos padrões do WordPress e o título "
+"continuar a aparecer, você precisará identificar a classe ou ID do seu "
+"elemento (título) e adicionar os detalhes na Aba Configurações. Lá, na Aba "
+"Configurações, você receberá mais informações sobre como fazer isso."
+
+#: hide-site-title.php:293
+msgid ""
+"If you choose to hide only selected pages and posts, the plugin will add a "
+"metabox* to all pages and posts for you to mark and decide whether the title "
+"will be displayed or not."
+msgstr ""
+"Se você optar por ocultar apenas páginas e postagens selecionadas, o plugin "
+"adicionará uma metabox* a todas as páginas e postagens para você marcar e "
+"decidir se o título será exibido ou não."
+
+#: hide-site-title.php:294
+msgid "(*) click Help at top right corner if necessary."
+msgstr "(*) clique em Ajuda no canto superior direito, se necessário."
+
+#: hide-site-title.php:295
+msgid ""
+"Using Selected Pages Method, if possible, the plugin will completely remove "
+"the title instead of just hiding with CSS or JavaScript."
+msgstr ""
+"Usando o Método de Páginas Selecionadas, se possível, o plugin removerá "
+"completamente o título em vez de apenas ocultá-lo com CSS ou JavaScript."
+
+#: hide-site-title.php:296
+msgid ""
+"If you encounter any issues, please request free support before leaving a "
+"negative review, as various factors such as low WordPress memory and other "
+"considerations may be at play. Check out our Troubleshooting tab."
+msgstr ""
+"Se você encontrar algum problema, solicite suporte gratuito antes de deixar "
+"uma avaliação negativa, pois vários fatores, como pouca memória do WordPress "
+"e outras considerações, podem estar em jogo. Confira nossa aba de Solução de "
+"problemas."
+
+#: hide-site-title.php:297
+msgid "Troubleshooting Page"
+msgstr "Página de solução de problemas"
+
+#: hide-site-title.php:298
+msgid "Support Page"
+msgstr "Página de suporte"
+
+#: hide-site-title.php:340
+msgid "Hide the Title on all Pages and Posts"
+msgstr "Ocultar o título em todas as páginas e postagens"
+
+#: hide-site-title.php:348
+msgid ""
+"Hide the title only on selected Pages and Posts. In this step, you need to "
+"look for the metabox on each page or post and mark it."
+msgstr ""
+"Oculte o título somente em Páginas e Posts selecionados. Nesta etapa, você "
+"precisa procurar o metabox em cada página ou post e marcá-lo."
+
+#: hide-site-title.php:356
+msgid "Show the Title on all Pages and Posts"
+msgstr "Mostrar o título em todas as páginas e postagens"
+
+#: hide-site-title.php:360
+msgid ""
+"One of the fields below should be filled out only if the title remains "
+"visible after activating this plugin. For instance, if your theme does not "
+"adhere to WordPress standards, it will be necessary to fill out one of the "
+"fields below. The two fields below will be considered only if you chose the "
+"first option above."
+msgstr ""
+"Um dos campos abaixo deve ser preenchido somente se o título permanecer "
+"visível após ativar este plugin. Por exemplo, se seu tema não aderir aos "
+"padrões do WordPress, será necessário preencher um dos campos abaixo. Os "
+"dois campos abaixo serão considerados somente se você escolher a primeira "
+"opção acima."
+
+#: hide-site-title.php:362
+msgid "No point or #, only the name."
+msgstr "Sem ponto ou #, apenas o nome."
+
+#: hide-site-title.php:364
+msgid ""
+"Click the Help button in the top right corner for more details if needed."
+msgstr ""
+"Clique no botão Ajuda no canto superior direito para obter mais detalhes, se "
+"necessário."
+
+#: hide-site-title.php:386
+msgid "Save Settings"
+msgstr "Salvar configurações"
+
+#: hide-site-title.php:399
+msgid ""
+"Often, things may not work as expected, but it's not always a plugin's "
+"fault. For instance, low WordPress or server memory, JavaScript errors "
+"caused by other plugins or themes, etc. If you encounter any issues, don't "
+"hesitate to check out our troubleshooting page, where you'll discover "
+"various solutions to common problems."
+msgstr ""
+"Muitas vezes, as coisas podem não funcionar como esperado, mas nem sempre é "
+"culpa de um plugin. Por exemplo, pouca memória do WordPress ou do servidor, "
+"erros de JavaScript causados por outros plugins ou temas, etc. Se você "
+"encontrar algum problema, não hesite em verificar nossa página de solução de "
+"problemas, onde você descobrirá várias soluções para problemas comuns."
+
+#: hide-site-title.php:402
+msgid "Visit Troubleshooting Page"
+msgstr "Visite a página de solução de problemas"
+
+#: hide-site-title.php:489
+msgid "Help"
+msgstr "Ajuda"
+
+#: includes/diagnose/class_bill_diagnose.php:713
+msgid "Our plugin"
+msgstr "Nosso plugin"
+
+#: includes/diagnose/class_bill_diagnose.php:715
+msgid ""
+"cannot function properly because your WordPress Memory Limit is too low. "
+"Your site will experience serious issues, even if you deactivate our plugin."
+msgstr ""
+"não pode funcionar corretamente porque seu Limite de Memória do WordPress é "
+"muito baixo. Seu site terá problemas sérios, mesmo se você desativar nosso "
+"plugin."
+
+#: includes/diagnose/class_bill_diagnose.php:721
+msgid "Learn more"
+msgstr "Saber mais"
+
+#: includes/diagnose/class_bill_diagnose.php:764
+msgctxt "Site Health"
+msgid "Critical Issues"
+msgstr "Questões Críticas"
+
+#: includes/diagnose/class_bill_diagnose.php:805
+msgid ""
+"Displaying the latest recurring errors from your error log file and "
+"eventually alert about low WordPress memory limit is a courtesy of plugin"
+msgstr ""
+"Exibir os últimos erros recorrentes do seu arquivo de log de erros e, "
+"eventualmente, alertar sobre o limite baixo de memória do WordPress é uma "
+"cortesia do plugin"
+
+#: includes/diagnose/class_bill_diagnose.php:807
+msgid ""
+"Disabling our plugin does not stop the errors from occurring; \n"
+"                it simply means you will no longer be notified here that "
+"they are happening, but they can still harm your site."
+msgstr ""
+"Desabilitar nosso plugin não impede que os erros ocorram; \n"
+"significa apenas que você não será mais notificado aqui sobre eles, mas eles "
+"ainda podem prejudicar seu site."
+
+#: includes/diagnose/class_bill_diagnose.php:815
+msgid "Potential Problems"
+msgstr "Problemas potenciais"
+
+#: includes/diagnose/class_bill_diagnose.php:823
+msgid "Low WordPress Memory Limit"
+msgstr "Limite de memória baixo do WordPress"
+
+#: includes/diagnose/class_bill_diagnose.php:836
+msgid "Your usage now"
+msgstr "Seu uso agora"
+
+#: includes/diagnose/class_bill_diagnose.php:844
+msgid "Total Php Server Memory"
+msgstr "Memória total do servidor PHP"
+
+#: includes/diagnose/class_bill_diagnose.php:853
+msgid ""
+"Your WordPress Memory Limit is too low, which can lead to critical issues on "
+"your site due to insufficient resources. Promptly address this issue before "
+"continuing."
+msgstr ""
+"Seu Limite de Memória do WordPress é muito baixo, o que pode levar a "
+"problemas críticos no seu site devido a recursos insuficientes. Resolva esse "
+"problema imediatamente antes de continuar."
+
+#: includes/diagnose/class_bill_diagnose.php:859
+#: includes/diagnose/class_bill_diagnose.php:897
+msgid "Learn More"
+msgstr "Saber mais"
+
+#: includes/diagnose/class_bill_diagnose.php:888
+msgid "Site Errors"
+msgstr "Erros do site"
+
+#: includes/diagnose/class_bill_diagnose.php:893
+msgid ""
+"Your site has experienced errors for the past 2 days. These errors, "
+"including JavaScript issues, can result in visual problems or disrupt "
+"functionality, ranging from minor glitches to critical site failures. "
+"JavaScript errors can terminate JavaScript execution, leaving all subsequent "
+"commands inoperable."
+msgstr ""
+"Seu site apresentou erros nos últimos 2 dias. Esses erros, incluindo "
+"problemas de JavaScript, podem resultar em problemas visuais ou interromper "
+"a funcionalidade, variando de pequenas falhas a falhas críticas do site. "
+"Erros de JavaScript podem encerrar a execução do JavaScript, deixando todos "
+"os comandos subsequentes inoperantes."
+
+#: includes/diagnose/class_bill_diagnose.php:951
+msgid "This is a partial list of the errors found."
+msgstr "Esta é uma lista parcial dos erros encontrados."
+
+#: includes/diagnose/class_bill_diagnose.php:1429
+msgid ""
+"These are critical issues that can have a significant impact on your site's "
+"performance. They can cause many plugins and functionalities to malfunction "
+"and, in some cases, render your site completely inoperative, depending on "
+"their severity. Address them promptly."
+msgstr ""
+"Esses são problemas críticos que podem ter um impacto significativo no "
+"desempenho do seu site. Eles podem fazer com que muitos plugins e "
+"funcionalidades não funcionem corretamente e, em alguns casos, tornar seu "
+"site completamente inoperante, dependendo da gravidade. Resolva-os "
+"imediatamente."
+
+#: mybanners.php:179
+msgid ""
+"If you use & enjoy Hide Title Plugin, please rate it on WordPress.org. It "
+"only takes a second and helps us keep the plugin free and maintained. Thank "
+"you!"
+msgstr ""
+"Se você usa e gosta do Hide Title Plugin, avalie-o no WordPress.org. Leva "
+"apenas um segundo e nos ajuda a manter o plugin gratuito e mantido. Obrigado!"
+
+#: mybanners.php:182
+msgid "Rate"
+msgstr "Avaliar"
+
+#. Plugin Name of the plugin/theme
+msgid "Hide Title"
+msgstr "Ocultar título"
+
+#. Description of the plugin/theme
+msgid "Remove Titles from Posts and Pages."
+msgstr "Remova títulos de postagens e páginas."
+
+#. Author of the plugin/theme
+msgid "Bill Minozzi"
+msgstr "Bill Minozzi"
+
+#. Author URI of the plugin/theme
+msgid "http://billminozzi.com"
+msgstr "http://billminozzi.com"
+
+#~ msgid "ID: &nbsp;#"
+#~ msgstr "EU IA:  #"
+
+#~ msgid "Class: &nbsp;. &nbsp;"
+#~ msgstr "Aula:  ."
+
+#~ msgid "Your site has errors."
+#~ msgstr "Seu site tem erros."
+
+#~ msgid ""
+#~ "can't function as intended. Errors, including JavaScript errors, may lead "
+#~ "to visual problems or disrupt functionality, from minor glitches to "
+#~ "critical site failures. Promptly address these issues before continuing."
+#~ msgstr ""
+#~ "não pode funcionar como pretendido. Erros, incluindo erros de JavaScript, "
+#~ "podem levar a problemas visuais ou interromper a funcionalidade, desde "
+#~ "pequenas falhas até falhas críticas do site. Resolva esses problemas "
+#~ "imediatamente antes de continuar."

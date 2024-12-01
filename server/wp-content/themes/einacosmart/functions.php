@@ -74,3 +74,24 @@ function get_einaco_footer() {
 
     return array('content' => $footer);
 }
+
+//To hide page title
+function hide_page_title_on_frontend($title, $id) {
+    // Do not alter titles in the admin area
+    if (is_admin()) {
+        return $title;
+    }
+
+    // Check if the title is part of a menu
+    if (in_the_loop() && 'nav_menu_item' === get_post_type($id)) {
+        return $title; // Keep the title for navigation menu items
+    }
+
+    // Hide titles on pages in the frontend
+    if (is_page($id)) {
+        return ''; // Return an empty string for page titles in frontend content
+    }
+
+    return $title; // Keep the title for everything else
+}
+add_filter('the_title', 'hide_page_title_on_frontend', 10, 2);

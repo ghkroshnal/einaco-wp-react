@@ -1,0 +1,112 @@
+#hide-site-title-containerright-dashboard h2 {
+  border-bottom: 5px solid #ccc;
+  padding-bottom: 5px;
+  text-shadow: 5px 5px 10px #888;
+}
+
+#hide-site-title-containerright-dashboard {
+  float: right;
+  /* background: lightgreen; */
+  /* width: 300px; */
+  /* max-width: 29%; */
+  margin-top: 17px;
+  padding: 0px;
+}
+
+#hide-site-title-containerright-dashboard ul {
+  /* max-width: 300px; */
+  padding: 5px 10px 15px 30px;
+  margin-left: 5px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  list-style: disc;
+  -moz-box-shadow: 5px 5px 15px #aaa;
+  -webkit-box-shadow: 5px 5px 15px #aaa;
+  box-shadow: 5px 5px 15px #aaa;
+  /* 2024 */
+  margin-top: 0px;
+}
+
+#hide-site-title-containerright-dashboard img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+
+#hide-site-title-dashboard-left {
+  float: left;
+  max-width: 72%;
+  min-width: 72%;
+}
+
+#hide-site-title-dashboard-right {
+  float: right;
+  max-width: 25%;
+  /* background: yellow; */
+  margin-right: 1%;
+  /* 2024*/
+  /* background: white; */
+  margin-top: 25px;
+}
+
+
+
+#hide-site-title-logo {
+  /* max-width: 200px; */
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+/* 2024 */
+.wrap-hide-site-title {
+  background-color: #fff;
+  max-width: 99%;
+  margin: 0 auto;
+  /* 2024 */
+  margin-right: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 1px;
+  margin-top: 0px;
+  padding-bottom: 30px;
+}
+
+.wrap-hide-site-title h2.title {
+  padding: 15px;
+  background-color: #0073aa;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 20px;
+}
+
+.wrap-hide-site-title p.description {
+  /* padding: 10px; */
+  font-size: 18px;
+  color: #0554e7;
+}
+
+.hide-site-title -form {
+  padding: 0% 0 0% 5%;
+}
+
+.hide-site-title -submit {
+  background: #0073aa;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  border: 0;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+/* Tablets and iPads */
+@media (max-width: 767px) {
+  #hide-site-title-containerright-dashboard {
+    display: none !important;
+  }
+
+  #hide-site-title-dashboard-left {
+    float: left;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
