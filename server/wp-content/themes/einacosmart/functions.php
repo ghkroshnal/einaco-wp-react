@@ -95,3 +95,59 @@ function hide_page_title_on_frontend($title, $id) {
     return $title; // Keep the title for everything else
 }
 add_filter('the_title', 'hide_page_title_on_frontend', 10, 2);
+
+// Form Submission handling
+add_action('rest_api_init', function () {
+    register_rest_route('custom/v1', '/send-email', array(
+        'methods' => 'POST',
+        'callback' => 'send_contact_email',
+        'permission_callback' => '__return_true', // Make sure to secure this in production
+    ));
+});
+
+function send_contact_email(WP_REST_Request $request) {
+    $params = $request->get_json_params();
+
+    $first_name = sanitize_text_field($params['firstName']);
+    $last_name = sanitize_text_field($params['lastName']);
+    $email = sanitize_email($params['email']);
+    $message = sanitize_textarea_field($params['message']);
+
+    $to = 'your-email@example.com'; // Replace with your email
+    $subject = 'New Contact Form Submission';
+    $body = "Name: $first_name $last_name\nEmail: $email\n\nMessage:\n$message";
+    $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+    $sent = wp_mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        return rest_ensure_response(array('status' => 'success', 'message' => 'Email sent successfully'));
+    } else {
+        return rest_ensure_response(array('status' => 'error', 'message' => 'Failed to send email'), 500);
+    }
+}
+
+// REST API endpoint for wp-blocks
+function register_patterns_endpoint() {
+    register_rest_route('custom/v1', '/patterns', array(
+        'methods' => 'GET',
+        'callback' => 'get_patterns',
+    ));
+}
+
+function get_patterns() {
+    $patterns = WP_Block_Patterns_Registry::get_instance()->get_all_registered();
+    $output = array();
+
+    foreach ($patterns as $name => $pattern) {
+        $output[] = array(
+            'name' => $name,
+            'title' => $pattern['title'],
+            'content' => $pattern['content'],
+        );
+    }
+
+    return $output;
+}
+
+add_action('rest_api_init', 'register_patterns_endpoint');
