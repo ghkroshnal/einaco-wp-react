@@ -1,31 +1,30 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use "../custom" as *;
+@use "../components/mixins" as *;
 
 .navbar-brand img {
-    width: 50px;
-    height: auto;
-    
+  width: 50px;
+  height: auto;
 }
 
 .menu {
-    @include gradient;
+  @include gradient;
 
+  li {
+    padding: 0 0.7rem;
 
-    li {
+    a {
+      color: $white;
       padding: 0 0.7rem;
-
-      a {
-        color: $white;
-        padding: 0 0.7rem;
-        text-transform: capitalize;
-        font-weight: 600;      
-
-      }
-      
-      &:hover {
-        color: $white;
-      }
-  
+      text-transform: capitalize;
+      font-weight: 600;
     }
-    
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+/* Adjust the margin of your menu bar to avoid overlapping with the admin bar */
+body.admin-bar .navbar {
+  margin-top: 32px;
 }
