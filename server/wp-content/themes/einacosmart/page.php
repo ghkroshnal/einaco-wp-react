@@ -1,6 +1,8 @@
-/* Template Name: Custom Page Template */
+<?php
+// /* Template Name: Custom Page Template */
 
-<?php get_header(); ?>
+get_header();
+?>
 
 <div class="content">
     <?php

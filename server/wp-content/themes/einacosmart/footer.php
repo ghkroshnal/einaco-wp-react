@@ -81,18 +81,17 @@
         <h5 class="text-capitalize fw-bold">Smart Code</h5>
         <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
         <p class="lh-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex obcaecati blanditiis reprehenderit ab
-          mollitia voluptatem consectetur?
+          we specialize in creating innovative, user-friendly, and robust web solutions designed to elevate your brand. From seamless web applications to comprehensive digital strategies including cloud hosting, SEO, and social media marketing, we provide everything you need to thrive online. Let us focus on the tech, while you focus on growing your business.
         </p>
       </div>
       <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
         <h5 class="text-capitalize fw-bold">Products</h5>
         <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
         <ul class="list-inline campany-list">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">Lorem ipsum</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Web Designing</a></li>
+          <li><a href="#">Social Media Marketing</a></li>
+          <li><a href="#">Cloud Hosting</a></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
@@ -119,7 +118,7 @@
   </div>
 
   <!-- Copyright Info -->
-  <div class="footer-bottom pt-5 pb-5">
+  <div class="footer-bottom pt-3 pb-3">
     <div class="container">
       <div class="row text-center text-white">
         <div class="col-12">

@@ -32,7 +32,7 @@ add_action('wp_enqueue_scripts', 'einaco_smart_theme_enqueue_scripts');
 function enable_cors($value) {
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept");
     return $value;
 }
 add_filter('rest_pre_serve_request', 'enable_cors');
@@ -152,3 +152,146 @@ function get_patterns() {
 }
 
 add_action('rest_api_init', 'register_patterns_endpoint');
+
+// CPT Portfolio
+function create_portfolio_cpt() {
+    $labels = array(
+        'name' => _x('Portfolios', 'Post Type General Name', 'textdomain'),
+        'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'textdomain'),
+        'menu_name' => __('Portfolios', 'textdomain'),
+        'name_admin_bar' => __('Portfolio', 'textdomain'),
+        'archives' => __('Portfolio Archives', 'textdomain'),
+        'attributes' => __('Portfolio Attributes', 'textdomain'),
+        'parent_item_colon' => __('Parent Portfolio:', 'textdomain'),
+        'all_items' => __('All Portfolios', 'textdomain'),
+        'add_new_item' => __('Add New Portfolio', 'textdomain'),
+        'add_new' => __('Add New', 'textdomain'),
+        'new_item' => __('New Portfolio', 'textdomain'),
+        'edit_item' => __('Edit Portfolio', 'textdomain'),
+        'update_item' => __('Update Portfolio', 'textdomain'),
+        'view_item' => __('View Portfolio', 'textdomain'),
+        'view_items' => __('View Portfolios', 'textdomain'),
+        'search_items' => __('Search Portfolio', 'textdomain'),
+        'not_found' => __('Not found', 'textdomain'),
+        'not_found_in_trash' => __('Not found in Trash', 'textdomain'),
+        'featured_image' => __('Featured Image', 'textdomain'),
+        'set_featured_image' => __('Set featured image', 'textdomain'),
+        'remove_featured_image' => __('Remove featured image', 'textdomain'),
+        'use_featured_image' => __('Use as featured image', 'textdomain'),
+        'insert_into_item' => __('Insert into Portfolio', 'textdomain'),
+        'uploaded_to_this_item' => __('Uploaded to this Portfolio', 'textdomain'),
+        'items_list' => __('Portfolios list', 'textdomain'),
+        'items_list_navigation' => __('Portfolios list navigation', 'textdomain'),
+        'filter_items_list' => __('Filter Portfolios list', 'textdomain'),
+    );
+    $args = array(
+        'label' => __('Portfolio', 'textdomain'),
+        'description' => __('Portfolio Description', 'textdomain'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'taxonomies' => array('category', 'post_tag'),
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'show_in_rest' => true,
+    );
+    register_post_type('portfolio', $args);
+}
+
+add_action('init', 'create_portfolio_cpt', 0);
+
+// Custom meta boxes for CPT portfolio
+function portfolio_custom_meta() {
+    add_meta_box('portfolio_meta', 'Portfolio Details', 'portfolio_meta_callback', 'portfolio', 'normal', 'high');
+}
+
+function portfolio_meta_callback($post) {
+    wp_nonce_field(basename(__FILE__), 'portfolio_nonce');
+    $portfolio_stored_meta = get_post_meta($post->ID);
+
+    ?>
+    <p>
+        <label for="meta-stack" class="portfolio-row-title"><?php _e('Technical Stack', 'textdomain') ?></label>
+        <input type="text" name="meta-stack" id="meta-stack" value="<?php if (isset($portfolio_stored_meta['meta-stack'])) echo $portfolio_stored_meta['meta-stack'][0]; ?>" />
+    </p>
+    <p>
+        <label for="meta-url" class="portfolio-row-title"><?php _e('Project URL', 'textdomain') ?></label>
+        <input type="url" name="meta-url" id="meta-url" value="<?php if (isset($portfolio_stored_meta['meta-url'])) echo $portfolio_stored_meta['meta-url'][0]; ?>" />
+    </p>
+    <?php
+}
+
+function save_portfolio_meta($post_id) {
+    if (!isset($_POST['portfolio_nonce']) || !wp_verify_nonce($_POST['portfolio_nonce'], basename(__FILE__))) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if ('portfolio' === $_POST['post_type']) {
+        if (!current_user_can('edit_post', $post_id)) return;
+    } else {
+        if (!current_user_can('edit_page', $post_id)) return;
+    }
+
+    if (isset($_POST['meta-stack'])) {
+        update_post_meta($post_id, 'meta-stack', sanitize_text_field($_POST['meta-stack']));
+    }
+
+    if (isset($_POST['meta-url'])) {
+        update_post_meta($post_id, 'meta-url', esc_url_raw($_POST['meta-url']));
+    }
+}
+
+add_action('add_meta_boxes', 'portfolio_custom_meta');
+add_action('save_post', 'save_portfolio_meta');
+
+// Shortcode generator for Portfolio items
+function display_portfolios_shortcode($atts) {
+    ob_start();
+    
+    $args = array(
+        'post_type' => 'portfolio',
+        'posts_per_page' => -1,
+    );
+    $portfolio_query = new WP_Query($args);
+
+    if ($portfolio_query->have_posts()) : ?>
+        <div class="container py-5">
+            <div class="row">
+                <?php while ($portfolio_query->have_posts()) : $portfolio_query->the_post(); 
+                    $project_url = get_field('project_url');
+                    $project_image = get_field('project_image');
+                ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card portfolio-card h-100">
+                            <?php if ($project_image) : ?>
+                                <img src="<?php echo esc_url($project_image['url']); ?>" class="card-img-top" alt="<?php echo esc_attr($project_image['alt']); ?>">
+                            <?php endif; ?>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php the_title(); ?></h5>
+                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                <?php if ($project_url) : ?>
+                                    <a href="<?php echo esc_url($project_url); ?>" class="btn btn-primary" target="_blank">View Project</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; 
+                wp_reset_postdata(); ?>
+            </div>
+        </div>
+    <?php else : 
+        echo '<p>No portfolios found</p>';
+    endif;
+
+    return ob_get_clean();
+}
+add_shortcode('display_portfolios', 'display_portfolios_shortcode');
+
+

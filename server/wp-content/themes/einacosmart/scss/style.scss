@@ -18,3 +18,6 @@
 @use "sections/get-started";
 @use "sections/footer";
 @use "sections/contactUs";
+
+//Import Pages
+@use "../scss/pages/ourPortfolio.scss";

@@ -1,9 +1,10 @@
 @use "../custom" as *;
-@use "../components/mixins" as *;
+//@use "../components/mixins" as *;
 
 .get-started {
   padding: 4rem 0;
   background-color: $gray-200;
+  height: auto;
 
   p {
     font-size: 1.5rem;
