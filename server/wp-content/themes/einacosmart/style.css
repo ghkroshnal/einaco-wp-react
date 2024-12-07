@@ -12233,6 +12233,10 @@ body.admin-bar .navbar {
   text-transform: capitalize;
 }
 
+.contact-page {
+  margin-top: 2rem; /* Adjust the value as needed */
+}
+
 .footer {
   padding-top: 1rem;
   background-color: #151414;
@@ -12444,4 +12448,104 @@ body.admin-bar .navbar {
   background-color: #412563;
 }
 
-/*# sourceMappingURL=style.css.map */
+.services-background {
+  background: linear-gradient(to right, rgba(148, 241, 151, 0.95), rgba(57, 35, 89, 0.95));
+  padding: 5rem 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fefefe;
+}
+
+.services-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fefefe;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.service-card .card-body {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.service-card .card-body .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #412563;
+}
+.service-card .card-body .card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #412563;
+}
+.service-card .card-body form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.service-card .card-body form button {
+  margin-top: 1rem;
+}
+.service-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #ddd;
+}
+
+.services-content {
+  margin-top: 3em;
+}
+.services-content .services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #412563;
+}
+.services-content .services-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  color: #412563;
+}
+.services-content .service-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #ddd;
+}
+
+.service-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1 1 30%;
+  margin: 1rem;
+}
